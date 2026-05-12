@@ -54,7 +54,7 @@
     /* ── SPLASH ── */
     #splash { position: fixed; inset: 0; background: var(--navy-dk); z-index: 99999; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; transition: opacity 0.7s ease, visibility 0.7s ease; }
     #splash::before { content: ''; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1800&q=80'); background-size: cover; background-position: center; filter: grayscale(30%); opacity: 0.15; }
-    #splash::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(8,14,30,0.95) 0%, rgba(14,22,52,0.92) 100%); mix-blend-mode: multiply; }
+    #splash::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,18,38,0.82) 0%, rgba(16,30,72,0.78) 100%); mix-blend-mode: multiply; }
     #splash.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
     .splash-logo { opacity: 0; transform: translateY(12px); transition: opacity 0.7s 0.15s ease, transform 0.7s 0.15s cubic-bezier(0.4,0,0.2,1); position: relative; z-index: 1; }
     #splash.ready .splash-logo { opacity: 1; transform: translateY(0); }
@@ -211,7 +211,8 @@
     .redes-header a:hover { color: var(--navy); border-color: var(--navy); }
     /* Placeholder redes — blockquotes de Instagram */
     .redes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .red-social-item { overflow: hidden; box-shadow: 0 2px 16px rgba(22,40,94,0.07); transition: transform 0.35s, box-shadow 0.35s; }
+    .red-social-item { overflow: hidden; box-shadow: 0 2px 16px rgba(22,40,94,0.07); transition: transform 0.35s, box-shadow 0.35s; height: 540px; }
+    .red-social-item > blockquote { height: 100%; }
     .red-social-item:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(22,40,94,0.12); }
     /* Links directos a redes si no hay embed */
     .social-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
@@ -356,11 +357,13 @@
       .sobre-pills { justify-content: center; }
       .sobre-logo-col { flex-direction: column; }
       .sobre-divider { display: none; }
+      .redes-grid-wrap { padding: 0; }
+      .red-social-item { height: auto; }
+      .redes-grid { gap: 1rem; }
       .boutique-inner { grid-template-columns: 1fr; }
       .boutique-sep { display: none; }
       .boutique-item { padding: 1.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
       .boutique-item:last-child { border-bottom: none; }
-      /* Redes header */
       .redes-header { flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
       .redes-header > div:last-child { align-items: center !important; }
       #diferenciadores, #areas, #sobre, #redes, #contacto, #boutique { padding: 70px 5%; }
@@ -430,7 +433,7 @@
   <div class="hero-lines-deco"></div>
   <div class="hero-overlay"></div>
   <!-- Decorador MIM esquina superior derecha -->
-  <div style="position:absolute;top:2.5rem;right:5%;z-index:2;display:flex;gap:8px;opacity:0.15;">
+  <div style="position:absolute;top:2.5rem;left:5%;z-index:2;display:flex;gap:8px;opacity:0.15;">
     <div style="width:2px;height:48px;background:white;"></div>
     <div style="width:2px;height:32px;background:white;align-self:flex-end;"></div>
     <div style="width:2px;height:48px;background:white;"></div>
